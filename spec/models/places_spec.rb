@@ -9,5 +9,7 @@ RSpec.describe Place, type: :model do
       longitude: 0,
     )
     expect(place).to_not be_valid
+    place.name = "Q"
+    expect(place).to be_valid
   end
 end
