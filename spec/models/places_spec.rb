@@ -10,5 +10,4 @@ RSpec.describe Place, type: :model do
     )
     expect(place).to_not be_valid
   end
-
 end
