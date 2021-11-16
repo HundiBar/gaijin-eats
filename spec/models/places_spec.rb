@@ -4,7 +4,7 @@ RSpec.describe Place, type: :model do
   it 'has a name of more than at least 1 character' do
     place = Place.new(
       name: '',
-      address: '',
+      address: '16 kamakura Krescent, Kamakura',
       latitude: 0,
       longitude: 0,
     )
