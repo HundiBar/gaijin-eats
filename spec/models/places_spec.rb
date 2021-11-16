@@ -29,10 +29,12 @@ RSpec.describe Place, type: :model do
     place = Place.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
-      latitude: -1.787689,
-      longitude: 0,
+      latitude: "",
+      longitude: "",
     )
 
     expect(place).to_not be_valid
+    place.latitude = -1.0304
+    expect(place).to be_valid
   end
 end
