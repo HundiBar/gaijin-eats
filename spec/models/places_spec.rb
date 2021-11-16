@@ -46,5 +46,7 @@ RSpec.describe Place, type: :model do
       longitude: "",
     )
     expect(place).to_not be_valid
+    place.longitude = 1.3040
+    expect(place).to be_valid
   end
 end
