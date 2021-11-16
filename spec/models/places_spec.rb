@@ -10,6 +10,7 @@ RSpec.describe Place, type: :model do
     )
     expect(place).to_not be_valid
     place.name = "Q"
+    expect(place.name).to have_attributes(size: (be>= 1))
     expect(place).to be_valid
   end
 
@@ -25,7 +26,7 @@ RSpec.describe Place, type: :model do
     expect(place).to be_valid
   end
 
-  it 'has a latitude value which is a number' do
+  it 'has a latitude value which is a valid number' do
     place = Place.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
@@ -38,7 +39,7 @@ RSpec.describe Place, type: :model do
     expect(place).to be_valid
   end
 
-  it 'has a longitude which is a number' do
+  it 'has a longitude which is a valid number' do
     place = Place.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
