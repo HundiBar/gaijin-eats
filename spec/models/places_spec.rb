@@ -34,8 +34,6 @@ RSpec.describe Place, type: :model do
       longitude: 1.0490,
     )
 
-    expect(place).to_not be_valid
-    place.latitude = -1.0304
     expect(place).to be_valid
   end
 
@@ -46,8 +44,6 @@ RSpec.describe Place, type: :model do
       latitude: -1.0304,
       longitude: "",
     )
-    expect(place).to_not be_valid
-    place.longitude = 1.3040
     expect(place).to be_valid
   end
 end
