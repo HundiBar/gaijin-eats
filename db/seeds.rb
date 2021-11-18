@@ -18,3 +18,8 @@ Place.create!(
   address: '〒150-0013 東京都渋谷区恵比寿１丁目２５−3 レジデンサプリマベェラァ201',
   name: '440 Broadway Taco Shop'
 )
+
+Place.create!(
+  address: '〒142-0053 東京都品川区中延５丁目１３−16 パープルビル 2F',
+  name: 'Shango Cuban'
+)
