@@ -8,3 +8,8 @@
 
 Place.destroy_all
 puts "Creating seeds"
+
+Place.create!(
+  address: '〒151-0072 東京都渋谷区幡ケ谷１丁目４−1 花ビル 1F',
+  name: 'Toyoda Cheesesteak'
+)
