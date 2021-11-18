@@ -23,3 +23,8 @@ Place.create!(
   address: '〒142-0053 東京都品川区中延５丁目１３−16 パープルビル 2F',
   name: 'Shango Cuban'
 )
+
+Place.create!(
+  address: '〒102-0074 東京都千代田区九段南３丁目５−4',
+  name: 'Swan & Lion'
+)
