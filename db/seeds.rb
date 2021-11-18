@@ -13,3 +13,8 @@ Place.create!(
   address: '〒151-0072 東京都渋谷区幡ケ谷１丁目４−1 花ビル 1F',
   name: 'Toyoda Cheesesteak'
 )
+
+Place.create!(
+  address: '〒150-0013 東京都渋谷区恵比寿１丁目２５−3 レジデンサプリマベェラァ201',
+  name: '440 Broadway Taco Shop'
+)
