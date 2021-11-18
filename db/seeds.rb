@@ -28,3 +28,11 @@ Place.create!(
   address: '〒102-0074 東京都千代田区九段南３丁目５−4',
   name: 'Swan & Lion'
 )
+
+Place.create!(
+  address: '〒169-0073 東京都新宿区百人町１丁目２４−8 2F A1 Shinjuku Town Plaza',
+  name: 'Mash Bros'
+)
+
+puts "Seeds compiled"
+puts "#{Place.all.count} places added"
