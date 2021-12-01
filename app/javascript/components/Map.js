@@ -54,7 +54,7 @@ const Map = (props) => {
           }}
         >
           <div style={{ maxWidth: 120 }}>
-            <p>{selected.name}</p>
+            <a href={`https://www.google.com/maps/place/${selected.address}`} target="_blank"><p>{selected.name}</p></a>
             <small>{selected.address}</small>
           </div>
         </InfoWindow>) : null}

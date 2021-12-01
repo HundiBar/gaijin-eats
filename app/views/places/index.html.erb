@@ -4,7 +4,7 @@
   markers: [@markers]
 }) %>
 <% @places.each do |place| %>
-  <h1><a href="https://www.google.com/maps/place/<%=place.address%>" target="_blank"><%= place.name %></a></h1>
+  <h1><a href="https://www.google.com/maps/place/<%=place.name%>/<%=place.address%>" target="_blank"><%= place.name %></a></h1>
   <p><%= place.address %></p>
   <p><%= place.latitude %></p>
   <p><%= place.longitude %></p>
