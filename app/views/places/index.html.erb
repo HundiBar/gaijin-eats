@@ -1,3 +1,8 @@
+<%= react_component("Map", {
+  center: @map_center,
+  zoom: @map_zoom,
+  markers: [@markers]
+}) %>
 <% @places.each do |place| %>
   <h1><%= place.name %></h1>
   <h1><%= place.address %></h1>
