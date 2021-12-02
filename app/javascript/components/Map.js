@@ -4,11 +4,13 @@ import {
   Marker,
   InfoWindow,
   MarkerClusterer,
+  Autocomplete,
 } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
-  height: '400px'
+  height: '400px',
+  marginRight: 10,
 };
 
 const Map = (props) => {
