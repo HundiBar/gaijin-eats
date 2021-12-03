@@ -5,10 +5,12 @@
   zoom: @map_zoom,
   markers: [@markers]
 }) %>
+<%= react_component("CardList", {
+
+  }) %>
 <% @places.each do |place| %>
   <h1><a href="https://www.google.com/maps/place/<%=place.name%>/<%=place.address%>" target="_blank"><%= place.name %></a></h1>
   <p><%= place.address %></p>
   <p><%= place.latitude %></p>
   <p><%= place.longitude %></p>
 <% end %>
-<h1>Cant oyu see me!</h1>
