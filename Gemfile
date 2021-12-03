@@ -25,6 +25,7 @@ gem 'geocoder'
 gem 'react-rails'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
+gem "font-awesome-rails"
 gem 'simple_form'
 
 # Use Active Storage variant
