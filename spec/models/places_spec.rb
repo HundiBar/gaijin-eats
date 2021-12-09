@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Place, type: :model do
   it 'has a name of more than at least 1 character' do
-    place = Place.new(
+    place = described_class.new(
       name: '',
       address: '16 kamakura Krescent, Kamakura',
       latitude: 0,
@@ -46,4 +46,5 @@ RSpec.describe Place, type: :model do
     )
     expect(place).to be_valid
   end
+
 end
