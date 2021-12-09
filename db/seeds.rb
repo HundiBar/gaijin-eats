@@ -7,6 +7,8 @@ end
 require 'net/http'
 require 'json'
 
+p ENV["GMAPS_API_BROWSER_KEY"]
+
 url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV['GMAPS_API_BROWSER_KEY']}"
 uri = URI(url)
 response = Net::HTTP.get(uri)
