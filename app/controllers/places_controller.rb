@@ -14,7 +14,7 @@ class PlacesController < ApplicationController
       }
     end
 
-    @google_api_key = ENV['GOOGLE_API_BROWSER_KEY']
+    @google_api_key = ENV['GMAPS_API_BROWSER_KEY']
 
     if @places.count.zero?
       @map_center = [35.6762, 139.6503] # Tokyo
