@@ -4,6 +4,15 @@ def place_lat_long(google_maps_url)
   {lat: match[1], long: match[2]} if match && !match[1].blank? && !match[2].blank?
 end
 
+require 'net/http'
+require 'json'
+
+url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV['GMAPS_API_BROWSER_KEY']}"
+uri = URI(url)
+response = Net::HTTP.get(uri)
+data = JSON.parse(response)
+p data["results"].first["place_id"]
+
 Place.destroy_all
 puts "Creating seeds"
 
