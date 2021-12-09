@@ -1,14 +1,13 @@
 require 'net/http'
 require 'json'
 
-api_key = ENV['API_KEY']
-p api_key
-url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{api_key}"
+api_key = ENV['GMAPS_API_SERVER_KEY']
+url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=AIzaSyB6YuSyiX-5R92N2CtaGKWxUndJGP1iwdw"
 p url
 uri = URI(url)
 response = Net::HTTP.get(uri)
 data = JSON.parse(response)
-p data
+p data["results"].first["place_id"]
 # # https://www.google.com/maps/place/Toyoda+Cheesesteak/@35.6765469,139.6752138,15z/data=!4m5!3m4!1s0x0:0xd743de5aafbdf25f!8m2!3d35.6765521!4d139.6752074
 
 # # https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=YOUR_API_KEY
