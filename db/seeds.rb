@@ -1,10 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+def place_lat_long(google_maps_url)
+  regex = %r{!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+))}
+  match = regex.match(google_maps_url)
+  {lat: match[1], long: match[2]} if match && !match[1].blank? && !match[2].blank?
+end
 
 Place.destroy_all
 puts "Creating seeds"
