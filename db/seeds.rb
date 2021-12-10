@@ -20,42 +20,23 @@ def fetch_place(google_maps_url)
   photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{photo_ref}&key=#{ENV['API_KEY']}"
 
   {
-    formatted_address: formatted_address,
+    address: formatted_address,
     name: name,
     rating: rating,
     photo_url: photo_url
   }
 end
 
-p fetch_place('https://www.google.pl/maps/place/Setagaya+Memorial+Hospital/@35.5994867,139.6211712,15z/data=!4m5!3m4!1s0x6018f44e594e52e9:0x70b81b675c6b6d8d!8m2!3d35.6037431!4d139.638029')
+restaurant_urls = ['https://www.google.pl/maps/place/Toyoda+Cheesesteak/@35.6765512,139.6730251,17z/data=!3m1!4b1!4m5!3m4!1s0x6018f3f0b37b6971:0xd743de5aafbdf25f!8m2!3d35.6765521!4d139.6752074', 'https://www.google.pl/maps/place/440+Broadway+Taco+Shop/@35.6470831,139.714044,17z/data=!3m1!4b1!4m5!3m4!1s0x60188b952a357e9b:0xf7eeaebe3f5d3a7d!8m2!3d35.6470788!4d139.7162327', 'https://www.google.pl/maps/place/Shango/@35.6015794,139.7065851,17z/data=!3m2!4b1!5s0x60188abc5212fd73:0x476135a128d88401!4m5!3m4!1s0x60188abc53070001:0x15cd65744b931c13!8m2!3d35.6015751!4d139.7087738', 'https://www.google.pl/maps/place/Swan+%26+Lion/@35.6922773,139.7404285,17z/data=!3m1!4b1!4m5!3m4!1s0x60188c6884115fdf:0x83b6c3683e694f4b!8m2!3d35.692273!4d139.7426172', 'https://www.google.pl/maps/place/Mash+Bros/@35.698766,139.6953976,17z/data=!3m2!4b1!5s0x60188e34181f54e3:0x2ef6dc2af7c7758!4m5!3m4!1s0x60188deda6c30e6f:0x249b603c26a5f41e!8m2!3d35.6987617!4d139.6975863', 'https://www.google.pl/maps/place/Umami+Burger+Aoyama+Shop/@35.5772203,139.5845349,11z/data=!4m9!1m2!2m1!1sUmami+Burger!3m5!1s0x60188ca06783d2f3:0x74ee257b34cb0b04!8m2!3d35.6644638!4d139.709373!15sCgxVbWFtaSBCdXJnZXIiA4gBAVoOIgx1bWFtaSBidXJnZXKSARRoYW1idXJnZXJfcmVzdGF1cmFudA']
 
-# Place.destroy_all
-# puts "Creating seeds"
+Place.destroy_all
+puts "Creating seeds"
 
-# Place.create!(
-#   address: '〒151-0072 東京都渋谷区幡ケ谷１丁目４−1 花ビル 1F',
-#   name: 'Toyoda Cheesesteak'
-# )
+restaurant_urls.each do |restaurant_url|
+  place_data = fetch_place(restaurant_url)
+  Place.create!(place_data)
+  puts "#{place_data[:name]} created"
+end
 
-# Place.create!(
-#   address: '〒150-0013 東京都渋谷区恵比寿１丁目２５−3 レジデンサプリマベェラァ201',
-#   name: '440 Broadway Taco Shop'
-# )
-
-# Place.create!(
-#   address: '〒142-0053 東京都品川区中延５丁目１３−16 パープルビル 2F',
-#   name: 'Shango Cuban'
-# )
-
-# Place.create!(
-#   address: '〒102-0074 東京都千代田区九段南３丁目５−4',
-#   name: 'Swan & Lion'
-# )
-
-# Place.create!(
-#   address: '〒169-0073 東京都新宿区百人町１丁目２４−8 2F A1 Shinjuku Town Plaza',
-#   name: 'Mash Bros'
-# )
-
-# puts "Seeds compiled"
-# puts "#{Place.all.count} places added"
+puts "Seeds compiled"
+puts "#{Place.all.count} places added"
