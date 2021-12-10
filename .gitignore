@@ -34,8 +34,12 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+<<<<<<< HEAD
+.env*
+=======
 # Ignore .env file containing credentials.
 .env*
 # Ignore Mac and Linux file system files
 *.swp
 .DS_Store
+>>>>>>> 2252100948e50add75c2f7499ba92e83e91236a9
