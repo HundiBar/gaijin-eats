@@ -1,4 +1,7 @@
 require "open-uri"
+require "uri"
+require "net/http"
+require 'json'
 
 def place_lat_long(google_maps_url)
   regex = %r{!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+))}
@@ -6,16 +9,46 @@ def place_lat_long(google_maps_url)
   {lat: match[1], long: match[2]} if match && !match[1].blank? && !match[2].blank?
 end
 
-def place_fetch
-  # coordinates = place_lat_long(google_maps_url)
-  url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV["API_KEY"]}"
-  p url
-  result_serialized = URI.open(url).read
-  result = JSON.parse(result_serialized)
-  p result["results"][0]["place_id"]
+# def place_fetch
+#   url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV["API_KEY"]}"
+#   p url
+#   result_serialized = URI.open(url).read
+#   result = JSON.parse(result_serialized)
+#   p result["results"][0]["place_id"]
+# end
+
+# place_fetch
+
+def fetch_place
+  url = URI("https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Swan+%26+Lion&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry%2Cphotos&key=#{ENV['tag']}")
+
+  https = Net::HTTP.new(url.host, url.port)
+  https.use_ssl = true
+
+  request = Net::HTTP::Get.new(url)
+
+  response = https.request(request)
+  puts response.read_body
+
+  # url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV['GMAPS_API_SERVER_KEY']}"
+  url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6922773,139.7404285&key=#{ENV['tag']}"
+  uri = URI(url)
+  response = Net::HTTP.get(uri)
+  data = JSON.parse(response)
+  p data["results"].first
+  p place_id = data["results"].first["place_id"]
+
+  details_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&key={fill in}"
+  details_uri = URI(details_url)
+
+  details_response = Net::HTTP.get(details_uri)
+  details_data = JSON.parse(response)
+  p details_data["results"].first
+
+  photos_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=Aap_uEAkX2nZsC9tOzNkMjF01DH1uiamRCW7AgYowfMBYtCYtvX0bEknLEwhPUAUBMAc1G6Wd1PV_wPMz60nevwR0cymVMPH_uTpZIMbwBEuMfytjq_ZFe-npSykUGKmk23dS85aeA4dYhFtj3nGTjQu28g-2nvn65mCPq5xk_3x8j8hgbc&key=#{key}"
 end
 
-place_fetch
+
 
 # Place.destroy_all
 # puts "Creating seeds"

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Place, type: :model do
+RSpec.describe Place do
   it 'has a name of more than at least 1 character' do
     place = described_class.new(
       name: '',
