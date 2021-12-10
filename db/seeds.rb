@@ -17,23 +17,6 @@ request = Net::HTTP::Get.new(url)
 response = https.request(request)
 puts response.read_body
 
-# require 'net/http'
-# require 'json'
-
-# # url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6765469,139.6752138&key=#{ENV['GMAPS_API_SERVER_KEY']}"
-# url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=35.6922773,139.7404285&key=#{ENV['tag']}"
-# uri = URI(url)
-# response = Net::HTTP.get(uri)
-# data = JSON.parse(response)
-# p data["results"].first
-# p place_id = data["results"].first["place_id"]
-
-# details_url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=#{place_id}&key={fill in}"
-# details_uri = URI(details_url)
-
-# details_response = Net::HTTP.get(details_uri)
-# details_data = JSON.parse(response)
-# p details_data["results"].first
 
 # photos_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=Aap_uEAkX2nZsC9tOzNkMjF01DH1uiamRCW7AgYowfMBYtCYtvX0bEknLEwhPUAUBMAc1G6Wd1PV_wPMz60nevwR0cymVMPH_uTpZIMbwBEuMfytjq_ZFe-npSykUGKmk23dS85aeA4dYhFtj3nGTjQu28g-2nvn65mCPq5xk_3x8j8hgbc&key={key}"
 
