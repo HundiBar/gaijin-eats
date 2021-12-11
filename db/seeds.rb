@@ -7,7 +7,8 @@ def name_from_url(google_maps_url)
 end
 
 def lat_long_form_url(google_maps_url)
- regex = (/!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+))/)
+  regex = %r{!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+))}
+  match = regex.match(google_maps_url)
 end
 
 def fetch_place(google_maps_url)
@@ -18,8 +19,8 @@ def fetch_place(google_maps_url)
   result = JSON.parse(result_serialized)
   place = result["candidates"].first
   formatted_address = place["formatted_address"]
-  long = place["geometry"]["location"]["long"]
-  lat = place["geometry"]["location"]["lat"].to_f
+  long = lat_long_form_url(google_maps_url)[1]
+  lat = lat_long_form_url(google_maps_url)[0]
   rating = place["rating"]
   photo_ref = place["photos"].first["photo_reference"]
   photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{photo_ref}&key=#{ENV['API_KEY']}"
