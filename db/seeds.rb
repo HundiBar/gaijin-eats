@@ -14,8 +14,8 @@ def fetch_place(google_maps_url)
   result = JSON.parse(result_serialized)
   place = result["candidates"].first
   formatted_address = place["formatted_address"]
-  long = place["geometry"].first["long"]
-  lat = place["geometry"].first["lat"]
+  long = place["geometry"].first["long"].to_f
+  lat = place["geometry"].first["lat"].to_f
   rating = place["rating"]
   photo_ref = place["photos"].first["photo_reference"]
   photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{photo_ref}&key=#{ENV['API_KEY']}"
