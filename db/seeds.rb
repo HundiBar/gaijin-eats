@@ -25,8 +25,8 @@ def fetch_place(google_maps_url)
     address: formatted_address,
     rating: rating,
     photo_url: photo_url,
-    long: long,
-    lat: lat
+    longitude: long,
+    latitude: lat
   }
 end
 
