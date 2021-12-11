@@ -57,8 +57,8 @@ const Map = (props) => {
             }}
           >
             <div style={{ maxWidth: 120 }}>
-              <img alt="no image in db as of yet"/>
-              <a href={`https://www.google.com/maps/place/${selected.address}`} target="_blank"><p>{selected.name}</p></a>
+              <img href={selected.img} alt="no"/>
+              <a href={selected.url} target="_blank"><p>{selected.name}</p></a>
               <small>{selected.address}</small>
             </div>
           </InfoWindow>) : null}

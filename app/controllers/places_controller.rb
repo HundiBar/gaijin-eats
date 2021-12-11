@@ -10,7 +10,9 @@ class PlacesController < ApplicationController
         lat: place.latitude,
         lng: place.longitude,
         name: place.name,
-        address: place.address
+        address: place.address,
+        url: place.url,
+        img: place.photo_url
       }
     end
 
