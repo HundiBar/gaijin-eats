@@ -6,6 +6,10 @@ def name_from_url(google_maps_url)
   match[1] if match && !match[1].blank?
 end
 
+def lat_long_form_url(google_maps_url)
+ regex = (/!3d(-?\d+(?:\.\d+)?)!4d(-?\d+(?:\.\d+))/)
+end
+
 def fetch_place(google_maps_url)
   place_name = name_from_url(google_maps_url)
   url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=#{place_name}&inputtype=textquery&fields=formatted_address%2Cname%2Crating%2Copening_hours%2Cgeometry%2Cphotos&key=#{ENV['API_KEY']}"
