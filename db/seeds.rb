@@ -14,16 +14,16 @@ def fetch_place(google_maps_url)
   result = JSON.parse(result_serialized)
   place = result["candidates"].first
   formatted_address = place["formatted_address"]
-  name = place["name"]
   rating = place["rating"]
   photo_ref = place["photos"].first["photo_reference"]
   photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{photo_ref}&key=#{ENV['API_KEY']}"
 
   {
     address: formatted_address,
-    name: name,
     rating: rating,
-    photo_url: photo_url
+    photo_url: photo_url,
+    long: long,
+    lat: lat
   }
 end
 
@@ -33,6 +33,7 @@ Place.destroy_all
 puts "Creating seeds"
 
 restaurant_urls.each do |restaurant_url|
+  [:name] = name_from_url(restaurant_url)
   place_data = fetch_place(restaurant_url)
   Place.create!(place_data)
   puts "#{place_data[:name]} created"
