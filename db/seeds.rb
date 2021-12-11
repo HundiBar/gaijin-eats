@@ -35,7 +35,7 @@ Place.destroy_all
 puts "Creating seeds"
 
 restaurant_urls.each do |restaurant_url|
-  [:name] = name_from_url(restaurant_url)
+  Place["name"] = name_from_url(restaurant_url)
   place_data = fetch_place(restaurant_url)
   Place.create!(place_data)
   puts "#{place_data[:name]} created"
