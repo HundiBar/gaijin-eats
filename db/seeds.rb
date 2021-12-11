@@ -21,6 +21,7 @@ def fetch_place(google_maps_url)
   photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=#{photo_ref}&key=#{ENV['API_KEY']}"
 
   {
+    name: place_name,
     address: formatted_address,
     rating: rating,
     photo_url: photo_url,
@@ -36,7 +37,6 @@ puts "Creating seeds"
 
 restaurant_urls.each do |restaurant_url|
   place_data = fetch_place(restaurant_url)
-  place_data["name"] = name_from_url(restaurant_url)
   Place.create!(place_data)
   puts "#{place_data[:name]} created"
 end
