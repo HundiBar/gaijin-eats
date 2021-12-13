@@ -101,5 +101,36 @@ Place.create!({
   cuisine: "British"
 })
 
+Place.create!({
+  name:"Umami Burger",
+  address:"3 Chome-15-5 Kitaaoyama, Minato City, Tokyo 107-0061",
+  photo_url: "https://media.gqjapan.jp/photos/5d27a4666f4b0f00089ac37c/master/pass/eye-1.jpg",
+  url:"https://www.google.com/maps/place/Umami+Burger+Aoyama+Shop/@35.5772203,139.5845343,11z/data=!4m9!1m2!2m1!1sumami+burger!3m5!1s0x60188ca06783d2f3:0x74ee257b34cb0b04!8m2!3d35.6644638!4d139.709373!15sCgx1bWFtaSBidXJnZXIiA4gBAVoOIgx1bWFtaSBidXJnZXKSARRoYW1idXJnZXJfcmVzdGF1cmFudA",
+  cuisine: "American"
+})
+
+Place.create!({
+  name:"NEW NEW YORK CLUB",
+  address:"3 Chome-8-5 Azabujuban, Minato City, Tokyo 106-0045",
+  photo_url: "https://img.hanako.tokyo/2017/04/W5A0887-768x584.jpg",
+  url:"https://www.google.com/maps/place/NEW+NEW+YORK+CLUB+BAGEL+%26+SANDWICH+SHOP/@35.6533448,139.7343992,17z/data=!4m12!1m6!3m5!1s0x60188ba04c144011:0x6da4b0a3f08ebecd!2sNEW+NEW+YORK+CLUB+BAGEL+%26+SANDWICH+SHOP!8m2!3d35.6533448!4d139.7343992!3m4!1s0x60188ba04c144011:0x6da4b0a3f08ebecd!8m2!3d35.6533448!4d139.7343992",
+  cuisine: "American"
+})
+
+Place.create!({
+  name:"Sanita",
+  address:"〒151-0066 Tokyo, Shibuya City, Nishihara, 2 Chome−27−4 4 1F 1F",
+  photo_url: "https://www.tokyoweekender.com/wp-content/uploads/2021/07/Sanita-Tokyo-7.jpg",
+  url:"https://www.google.com/maps/place/Sanita/@35.5896161,139.5078524,11z/data=!3m1!5s0x6018f33bb335683b:0x11e27fa3a39093c1!4m9!1m2!2m1!1ssanita!3m5!1s0x6018f392fce7d1db:0x7a38de6783868782!8m2!3d35.6752259!4d139.6783563!15sCgZzYW5pdGFaCCIGc2FuaXRhkgEDYmFy",
+  cuisine: "American"
+})
+
+Place.create!({
+  name:"Freeman Shokudo",
+  address:"2 Chome-27-4 Nishihara, Shibuya City, Tokyo 151-0066",
+  photo_url: "https://www.tokyoweekender.com/wp-content/uploads/2021/07/Sanita-Tokyo-7.jpg",
+  url:"https://www.google.com/maps/place/Freeman+Shokudo/@35.6752687,139.6762402,17z/data=!3m2!4b1!5s0x6018f33bb335683b:0x11e27fa3a39093c1!4m5!3m4!1s0x6018f36ed0027493:0x1455719901baf0f0!8m2!3d35.6752644!4d139.6784289",
+  cuisine: "American"
+})
 puts "Seeds compiled"
 puts "#{Place.all.count} places added"
