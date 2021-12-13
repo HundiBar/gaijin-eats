@@ -64,7 +64,7 @@ Place.destroy_all
 Place.create!({
   name:"Toyoda Cheesesteak",
   address:"〒151-0072 Tokyo, Shibuya City, Hatagaya, 1 Chome−4−1 花ビル 1F",
-  photo_url: "toyoda-cheesesteak.jpeg",
+  photo_url: "https://www.heinz.co.jp/wp-content/uploads/2020/06/toyoda_001-1.jpg",
   url:"https://www.google.com/maps/place/Toyoda+Cheesesteak/@35.6765326,139.6751098,14z/data=!4m5!3m4!1s0x6018f3f0b37b6971:0xd743de5aafbdf25f!8m2!3d35.6765521!4d139.6752074",
   cuisine: "American"
 })
@@ -72,7 +72,7 @@ Place.create!({
 Place.create!({
   name:"440 Broadway Taco Shop",
   address:"〒150-0013 Tokyo, Shibuya City, Ebisu, 1 Chome−25−3 レジデンサプリマベェラァ201",
-  photo_url: "broadway-taco.jpeg",
+  photo_url: "https://imageproxy.wolt.com/venue/600f78726cc7a2599f5882a4/542f854a-605f-11eb-9e7e-0aa00ca068f7_440broadwaytaco_group_1.jpg",
   url:"https://www.google.com/maps/place/440+Broadway+Taco+Shop/@35.6470831,139.714044,17z/data=!3m1!4b1!4m5!3m4!1s0x60188b952a357e9b:0xf7eeaebe3f5d3a7d!8m2!3d35.6470788!4d139.7162327",
   cuisine: "Mexican"
 })
@@ -80,7 +80,7 @@ Place.create!({
 Place.create!({
   name:"Shango",
   address:"〒142-0053 Tokyo, Shinagawa City, Nakanobu, 5 Chome−13−16 パープルビル 2F",
-  photo_url: "shango.jpeg",
+  photo_url: "https://fastly.4sqi.net/img/general/600x600/7141012_t1ZroVVQQU67G0p1p8en19SmNtNCETxIE0Kgb1veG4w.jpg",
   url:"https://www.google.com/maps/place/Shango/@35.6015751,139.7065851,17z/data=!3m2!4b1!5s0x60188abc5212fd73:0x476135a128d88401!4m5!3m4!1s0x60188abc53070001:0x15cd65744b931c13!8m2!3d35.6015751!4d139.7087738",
   cuisine: "Cuban"
 })
@@ -88,7 +88,7 @@ Place.create!({
 Place.create!({
   name:"Swan & Lion",
   address:"3 Chome-5-4 Kudanminami, Chiyoda City, Tokyo 102-0074",
-  photo_url: "swan-lion.jpeg",
+  photo_url: "https://media.timeout.com/images/103081382/image.jpg",
   url:"https://www.google.com/maps/place/Swan+%26+Lion/@35.692273,139.7404285,17z/data=!3m2!4b1!5s0x60188c688414b1b5:0x36e81c670c993809!4m5!3m4!1s0x60188c6884115fdf:0x83b6c3683e694f4b!8m2!3d35.692273!4d139.7426172",
   cuisine: "British"
 })
@@ -96,7 +96,7 @@ Place.create!({
 Place.create!({
   name:"Mash Bros",
   address:"〒169-0073 Tokyo, Shinjuku City, Hyakunincho, 1 Chome−24−8 2F A1 Shinjuku Town Plaza",
-  photo_url: "https://media.timeout.com/images/103081382/image.jpg",
+  photo_url: "https://imgfp.hotp.jp/IMGH/83/11/P036098311/P036098311_480.jpg",
   url:"https://www.google.com/maps/place/Mash+Bros/@35.6987617,139.6953976,17z/data=!3m2!4b1!5s0x60188e34181f54e3:0x2ef6dc2af7c7758!4m5!3m4!1s0x60188deda6c30e6f:0x249b603c26a5f41e!8m2!3d35.6987617!4d139.6975863",
   cuisine: "British"
 })

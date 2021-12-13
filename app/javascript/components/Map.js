@@ -57,7 +57,7 @@ const Map = (props) => {
             }}
           >
             <div style={{ maxWidth: 120 }}>
-              <img style={{width: 120, height: 120}} src={selected.img} alt="no"/>
+              <img style={{objectFit: 'contain', width: 120, height: 120}} src={selected.img} alt="no"/>
               <a href={selected.url} target="_blank"><p>{selected.name}</p></a>
               <small>{selected.address}</small>
             </div>
