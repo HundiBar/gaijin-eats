@@ -16,7 +16,7 @@ const stylesArr = [
   {
     "featureType": "administrative",
     "elementType": "all",
-    "stylers": [
+    stylers: [
       {
         "saturation": "-100"
       }
@@ -274,7 +274,9 @@ const Map = (props) => {
     <div className="map-wrapper">
       <GoogleMap
         mapContainerStyle={containerStyle}
-        style={stylesArr}
+        options={{
+          styles: [{ stylers: [{ 'saturation': 50 }, { 'gamma': 0.5 }] }]
+        }}
         center={position}
         zoom={props.zoom}
       >
