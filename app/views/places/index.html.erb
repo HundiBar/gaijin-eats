@@ -5,18 +5,8 @@
   zoom: @map_zoom,
   markers: [@markers]
 }) %>
-<div class="card-wrapper">
-  <% @places.each do |place| %>
-    <%= react_component("Card", {
-      key:place.id,
-      name: place.name,
-      address: place.address,
-      longitude:place.longitude,
-      latitude: place.latitude,
-      url: place.url,
-      photo_url: place.photo_url,
-      cuisine: place.cuisine,
-      supermarket: place.supermarket
-      }) %>
-  <% end %>
+<div class="content-wrapper">
+  <%= react_component("Cards", {
+  places: @places
+}) %>
 </div>
