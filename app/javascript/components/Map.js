@@ -12,256 +12,6 @@ const containerStyle = {
   height: '400px',
 };
 
-const stylesArr = [
-  {
-    "featureType": "administrative",
-    "elementType": "all",
-    stylers: [
-      {
-        "saturation": "-100"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.province",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "lightness": 65
-      },
-      {
-        "visibility": "on"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "lightness": "50"
-      },
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": "-100"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "all",
-    "stylers": [
-      {
-        "lightness": "30"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "all",
-    "stylers": [
-      {
-        "lightness": "40"
-      }
-    ]
-  },
-  {
-    "featureType": "transit",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "hue": "#ffff00"
-      },
-      {
-        "lightness": -25
-      },
-      {
-        "saturation": -97
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "lightness": -25
-      },
-      {
-        "saturation": -100
-      }
-    ]
-  }
-][
-  {
-    "featureType": "administrative",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": "-100"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.province",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "lightness": 65
-      },
-      {
-        "visibility": "on"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "lightness": "50"
-      },
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": "-100"
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "all",
-    "stylers": [
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "all",
-    "stylers": [
-      {
-        "lightness": "30"
-      }
-    ]
-  },
-  {
-    "featureType": "road.local",
-    "elementType": "all",
-    "stylers": [
-      {
-        "lightness": "40"
-      }
-    ]
-  },
-  {
-    "featureType": "transit",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
-      },
-      {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "hue": "#ffff00"
-      },
-      {
-        "lightness": -25
-      },
-      {
-        "saturation": -97
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels",
-    "stylers": [
-      {
-        "lightness": -25
-      },
-      {
-        "saturation": -100
-      }
-    ]
-  }
-]
-
 const Map = (props) => {
   const [selected, setSelected] = useState(null)
 
@@ -270,12 +20,139 @@ const Map = (props) => {
     lng: props.center[1],
   };
 
+  const image =
+    "http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_black.png";
+
   return (
     <div className="map-wrapper">
       <GoogleMap
         mapContainerStyle={containerStyle}
         options={{
-          styles: [{ stylers: [{ 'saturation': 50 }, { 'gamma': 0.5 }] }]
+          styles: [
+            {
+              "featureType": "administrative",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "saturation": "-100"
+                }
+              ]
+            },
+            {
+              "featureType": "administrative.province",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "visibility": "off"
+                }
+              ]
+            },
+            {
+              "featureType": "landscape",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "saturation": -100
+                },
+                {
+                  "lightness": 65
+                },
+                {
+                  "visibility": "on"
+                }
+              ]
+            },
+            {
+              "featureType": "poi",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "saturation": -100
+                },
+                {
+                  "lightness": "50"
+                },
+                {
+                  "visibility": "simplified"
+                }
+              ]
+            },
+            {
+              "featureType": "road",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "saturation": "-100"
+                }
+              ]
+            },
+            {
+              "featureType": "road.highway",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "visibility": "simplified"
+                }
+              ]
+            },
+            {
+              "featureType": "road.arterial",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "lightness": "30"
+                }
+              ]
+            },
+            {
+              "featureType": "road.local",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "lightness": "40"
+                }
+              ]
+            },
+            {
+              "featureType": "transit",
+              "elementType": "all",
+              "stylers": [
+                {
+                  "saturation": -100
+                },
+                {
+                  "visibility": "simplified"
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "geometry",
+              "stylers": [
+                {
+                  "hue": "#ffff00"
+                },
+                {
+                  "lightness": -25
+                },
+                {
+                  "saturation": -97
+                }
+              ]
+            },
+            {
+              "featureType": "water",
+              "elementType": "labels",
+              "stylers": [
+                {
+                  "lightness": -25
+                },
+                {
+                  "saturation": -100
+                }
+              ]
+            }
+          ]
         }}
         center={position}
         zoom={props.zoom}
@@ -292,6 +169,7 @@ const Map = (props) => {
                   lat: marker.lat,
                   lng: marker.lng,
                 }}
+                icon= {image}
                 clusterer={clusterer}
                 onClick={() => {
                   setSelected(marker)
