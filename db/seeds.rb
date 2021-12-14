@@ -138,7 +138,7 @@ Place.create!({
 Place.create!({
   name:"Freeman Shokudo",
   address:"2 Chome-27-4 Nishihara, Shibuya City, Tokyo 151-0066",
-  photo_url: "https://www.tokyoweekender.com/wp-content/uploads/2021/07/Sanita-Tokyo-7.jpg",
+  photo_url: "https://media.timeout.com/images/105788919/image.jpg",
   url:"https://www.google.com/maps/place/Freeman+Shokudo/@35.6752687,139.6762402,17z/data=!3m2!4b1!5s0x6018f33bb335683b:0x11e27fa3a39093c1!4m5!3m4!1s0x6018f36ed0027493:0x1455719901baf0f0!8m2!3d35.6752644!4d139.6784289",
   cuisine: "American",
   supermarket: "no"
