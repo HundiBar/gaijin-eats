@@ -194,7 +194,7 @@ Place.create!({
 Place.create!({
   name:"Nissin World Delicatessen",
   address:"〒2 Chome-32-13 Higashiazabu, Minato City, Tokyo 106-0044",
-  photo_url: "https://soranews24.com/wp-content/uploads/sites/3/2021/07/DV-4.jpg?w=640",
+  photo_url: "https://resources.realestate.co.jp/wp-content/uploads/2017/10/Cheese-Selection-at-Nissin-World-Delicatessen-Higashi-Azabu-Tokyo-2.jpeg",
   url:"https://www.google.com/maps/place/Darvish/@35.7054985,139.7233442,12z/data=!3m1!5s0x60188eac95027171:0x139b01389577657!4m9!1m2!2m1!1sdarvish!3m5!1s0x60188eac94f93625:0xf6226f19e626a84b!8m2!3d35.6924701!4d139.7791642!15sCgdkYXJ2aXNoWgkiB2RhcnZpc2iSARNhc2lhbl9ncm9jZXJ5X3N0b3Jl",
   cuisine: "International",
   supermarket: "yes"
