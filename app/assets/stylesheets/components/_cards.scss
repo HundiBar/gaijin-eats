@@ -1,12 +1,39 @@
 .card-wrapper {
+  margin: 10px;
+
+}
+
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 10px;
   grid-gap: 16px;
 }
 
-.card >img {
+.cards--title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.cards--subtitle {
+  font-weight: 300;
+  font-size: 22px;
+  padding-bottom: 40px;
+}
+
+.restaurant-card >img {
   width: 350px;
   height: 280px;
+  object-fit: cover;
   border-radius: 8px;
+}
+
+.restaurant-card--name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.restaurant-card--cuisine {
+  font-size: 16px;
+  font-weight: "light", 300;
+  font-style: italic;
 }
