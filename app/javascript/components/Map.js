@@ -21,7 +21,7 @@ const Map = (props) => {
   };
 
   const image =
-    "http://maps.gstatic.com/mapfiles/ridefinder-images/mm_20_black.png";
+    "https://maps.gstatic.com/mapfiles/kml/paddle/wht-circle-lv.png";
 
   return (
     <div className="map-wrapper">
