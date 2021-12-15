@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_12_13_030809) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "rating"
     t.string "photo_url"
+    t.string "restaurant_url"
     t.string "cuisine"
     t.string "url"
     t.string "supermarket"
