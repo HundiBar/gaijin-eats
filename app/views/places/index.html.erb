@@ -5,10 +5,6 @@
   zoom: @map_zoom,
   markers: [@markers]
 }) %>
-<%= react_component("Tabs", {
+<%= react_component("Tabs", {places: @places
 }) %>
-<div class="content-wrapper">
-  <%= react_component("CardsList", {
-  places: @places
-}) %>
-</div>
+

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Tab = ({ cuisine }) => {
+const Tab = ({ cuisine, filterByCousine }) => {
   return (
     <div className="tab">
-      <button>{cuisine}</button>
+      <button value={cuisine} onClick={filterByCousine}>{cuisine}</button>
     </div>
 
   )
