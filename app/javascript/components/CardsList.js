@@ -11,6 +11,7 @@ const cardsList = ({places}) => {
         photo_url={place.photo_url}
         cuisine={place.cuisine}
         supermarket={place.supermarket}
+        url = {place.url}
       >
 
       </Card>
@@ -26,6 +27,7 @@ const cardsList = ({places}) => {
           photo_url={place.photo_url}
           cuisine={place.cuisine}
           supermarket={place.supermarket}
+          url={place.url}
         >
 
         </Card>
