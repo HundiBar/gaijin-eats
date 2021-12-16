@@ -1,12 +1,11 @@
 .card-wrapper {
   margin: 10px;
-
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 16px 0;
 }
 
 .cards--title {
@@ -20,7 +19,11 @@
   padding-bottom: 40px;
 }
 
-.restaurant-card >img {
+.restaurants {
+  width: 100%;
+}
+
+.restaurant-card > img {
   width: 350px;
   height: 280px;
   object-fit: cover;
@@ -36,4 +39,10 @@
   font-size: 16px;
   font-weight: "light", 300;
   font-style: italic;
+}
+
+.load-more-button {
+  margin: 0 auto;
+  width: 214px;
+  height: 46px;
 }

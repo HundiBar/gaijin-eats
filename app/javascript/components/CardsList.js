@@ -41,7 +41,8 @@ const cardsList = ({places}) => {
         </div>
         <div className= "cards">
           {cardsRenderRestaurants}
-        </div>
+        </div >
+          <button className="load-more-button">Load More</button>
       </div>
       <div className="supermarkets">
         <div>
