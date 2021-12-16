@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Card =({name,photo_url,url,cuisine,supermarket}) => {
-  return(
+const Card = ({ name, photo_url, url, cuisine, supermarket }) => {
+  return (
     <div className="card">
-      <img src={photo_url} alt="no"/>
-      <p>{name}</p>
-      <p>{cuisine}</p>
+      <img src={photo_url} alt="no" />
+      <p className='place-name'>{name}</p>
+      <p className='cuisine'>{cuisine}</p>
     </div>
 
   )
