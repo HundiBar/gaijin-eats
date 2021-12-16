@@ -43,6 +43,23 @@
 
 .load-more-button {
   margin: 0 auto;
+  width: 215px;
+  padding: 40px 0 60px  0;
+}
+
+.load-more-button > button {
+  margin: 0 auto;
   width: 214px;
   height: 46px;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.supermarkets {
+  width: 100%;
 }

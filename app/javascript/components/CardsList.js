@@ -35,26 +35,29 @@ const cardsList = ({places}) => {
   return (
     <div className="card-wrapper">
       <div className="restaurants">
-        <div>
-          <h2 className="cards--title">Cafes &amp; Restaurants</h2>
-          <p className="cards--subtitle">Find that homey flavor you’ve been craving from back home</p>
-        </div>
-        <div className= "cards">
+        <h2 className="cards--title">Cafes &amp; Restaurants</h2>
+        <p className="cards--subtitle">Find that homey flavor you’ve been craving from back home</p>
+        <div className="cards">
           {cardsRenderRestaurants}
-        </div >
-          <button className="load-more-button">Load More</button>
+        </div>
+        <div className="load-more-button">
+          <button>Load more</button>
+        </div>
       </div>
       <div className="supermarkets">
-        <div>
-          <h2 className="cards--title">Supermarkets</h2>
-          <p className="cards--subtitle">The places that can make your home feel like home again</p>
-        </div>
+        <h2 className="cards--title">Supermarkets</h2>
+        <p className="cards--subtitle">The places that can make your home feel like home again</p>
         <div className="cards">
           {cardsRenderSupermarkets}
+        </div>
+        <div className="load-more-button">
+          <button>Load more</button>
         </div>
       </div>
     </div>
   )
 }
+
+
 
 export default cardsList
