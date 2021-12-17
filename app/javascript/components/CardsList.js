@@ -36,7 +36,7 @@ const cardsList = ({places}) => {
   })
   return (
     <div className="card-wrapper">
-      <div className="restaurants">
+      <div className="card">
         <h2 className="cards--title">Cafes &amp; Restaurants</h2>
         <p className="cards--subtitle">Find that homey flavor you’ve been craving from back home</p>
         <div className="cards">
@@ -46,7 +46,7 @@ const cardsList = ({places}) => {
           <button>Load more</button>
         </div>
       </div>
-      <div className="supermarkets">
+      <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
         <p className="cards--subtitle">The places that can make your home feel like home again</p>
         <div className="cards">

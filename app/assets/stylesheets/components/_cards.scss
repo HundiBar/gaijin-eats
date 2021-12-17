@@ -8,6 +8,10 @@
   grid-gap: 16px 0;
 }
 
+.card {
+  width: 100%;
+}
+
 .cards--title {
   font-weight: 700;
   font-size: 32px;
@@ -20,15 +24,6 @@
   padding-bottom: 40px;
 }
 
-.restaurants {
-  width: 100%;
-}
-
-.restaurant-card > img {
-
-  width: 350px;
-  border: none;
-}
 
 .card .place-name {
   font-weight: bold;
@@ -44,20 +39,19 @@
 }
 
 .card > img {
-  width: 100%;
+  width: 98%;
   height: 280px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
-  object-fit: cover;
 }
 
-.restaurant-card--name {
+.card--name {
   font-size: 18px;
   font-weight: 700;
 }
 
-.restaurant-card--cuisine {
+.card--cuisine {
   font-size: 16px;
   font-weight: "light", 300;
   font-style: italic;

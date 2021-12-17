@@ -1,14 +1,13 @@
 import React from 'react'
 
-
 const Card =({name,photo_url,url,cuisine,supermarket}) => {
   return(
     <>
-    <a href={url}>
-      <div className="restaurant-card">
+    <a target= "_blank" href={url}>
+      <div className="card">
         <img src={photo_url} alt="no"/>
-        <p className="restaurant-card--name">{name}</p>
-        <p className="restaurant-card--cuisine">{cuisine}</p>
+        <p className="card--name">{name}</p>
+        <p className="card--cuisine">{cuisine}</p>
       </div>
     </a>
     </>
