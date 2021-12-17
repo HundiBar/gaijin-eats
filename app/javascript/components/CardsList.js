@@ -6,7 +6,7 @@ import LoadMoreButton from "./LoadMoreButton";
 
 const cardsList = ({places}) => {
   const [items, setItems] = useState([]);
-  const [visible, setVisible] = useState(6);
+  const [visible, setVisible] = useState(3);
   const loadMore = () => {
     setVisible((prevValue) => prevValue + 3)
   }
