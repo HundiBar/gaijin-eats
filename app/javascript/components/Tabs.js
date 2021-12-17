@@ -42,4 +42,5 @@ const Tabs = ({ places }) => {
   )
 }
 
+
 export default Tabs
