@@ -1,12 +1,11 @@
 import React from 'react'
 
-const loadMore = ({ loadMore }) => {
+const LoadMoreButton = () => {
   return (
-    <div>
-      <button onClick={loadMore}>Load more</button>
+    <div className="load-more-button">
+      <button>Load more</button>
     </div>
-
   )
 }
 
-export default loadMore
+export default LoadMoreButton
