@@ -29,13 +29,13 @@ const Tabs = ({ places }) => {
 
   return (
     <div>
-      <div className='tabs-section'>
-        <h2>Filter by cuisine</h2>
-        <div className="cuisines-wrapper">
-          {cuisines}
-        </div>
-      </div>
       <div className="content-wrapper">
+        <div className='tabs-section'>
+          <h2>Filter by cuisine</h2>
+          <div className="cuisines-wrapper">
+            {cuisines}
+          </div>
+        </div>
         <CardsList places={placesFiltered}></CardsList>
       </div>
     </div>
