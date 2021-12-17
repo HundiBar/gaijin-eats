@@ -5,7 +5,16 @@ import LoadMoreButton from "./LoadMoreButton";
 
 
 const cardsList = ({places}) => {
-  let cardsRenderRestaurants = places.slice(0,6).map((place) => {
+  const [items, setItems] = useState([]);
+  const [visible, setVisible] = useState(6);
+  const loadMore = () => {
+    setVisible((prevValue) => prevValue + 3)
+  }
+
+  useEffect(() => {
+    setItems(places)
+  })
+  let cardsRenderRestaurants = items.slice(0, visible).map((place) => {
     if (place.supermarket === "no") {
       return (
       <Card
@@ -46,7 +55,7 @@ const cardsList = ({places}) => {
         <div className="cards">
           {cardsRenderRestaurants}
         </div>
-          <LoadMoreButton></LoadMoreButton>
+          <LoadMoreButton loadMore = {loadMore}></LoadMoreButton>
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>

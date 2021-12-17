@@ -1,9 +1,9 @@
 import React from 'react'
 
-const LoadMoreButton = () => {
+const LoadMoreButton = ({loadMore}) => {
   return (
     <div className="load-more-button">
-      <button>Load more</button>
+      <button onClick={loadMore}>Load more</button>
     </div>
   )
 }
