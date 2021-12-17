@@ -1,50 +1,54 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import LoadMoreButton from "./LoadMoreButton";
 
 
 
-const cardsList = ({places}) => {
+const cardsList = ({ places }) => {
   const [items, setItems] = useState([]);
-  const [visible, setVisible] = useState(3);
-  const loadMore = () => {
-    setVisible((prevValue) => prevValue + 3)
-  }
+  const [visibleRestaurants, setVisibleRestaurants] = useState(3);
+  const [visibleSupermarkets, setVisibleSupermarkets] = useState(3);
 
   useEffect(() => {
     setItems(places)
   })
-  let cardsRenderRestaurants = items.slice(0, visible).map((place) => {
-    if (place.supermarket === "no") {
-      return (
+
+  const loadMoreRestaurants = () => {
+    setVisibleRestaurants((prevValue) => prevValue + 3)
+  }
+
+  const loadMoreSupermarkets = () => {
+    setVisibleSupermarkets((prevValue) => prevValue + 3)
+  }
+
+  const restaurants = items.filter((place) => place.supermarket === "no")
+  let cardsRenderRestaurants = restaurants.slice(0, visibleRestaurants).map((place) => {
+    return (
       <Card
         key={place.id}
         name={place.name}
         photo_url={place.photo_url}
         cuisine={place.cuisine}
         supermarket={place.supermarket}
-        url = {place.url}
+        url={place.url}
       >
-
       </Card>
-      )
-    }
+    )
   })
-  let cardsRenderSupermarkets = places.map((place) => {
-    if (place.supermarket === "yes") {
-      return (
-        <Card
-          key={place.id}
-          name={place.name}
-          photo_url={place.photo_url}
-          cuisine={place.cuisine}
-          supermarket={place.supermarket}
-          url={place.url}
-        >
 
-        </Card>
-      )
-    }
+  const supermarkets = items.filter((place) => place.supermarket === "yes")
+  let cardsRenderSupermarkets = supermarkets.slice(0, visibleSupermarkets).map((place) => {
+    return (
+      <Card
+        key={place.id}
+        name={place.name}
+        photo_url={place.photo_url}
+        cuisine={place.cuisine}
+        supermarket={place.supermarket}
+        url={place.url}
+      >
+      </Card>
+    )
   })
 
   return (
@@ -55,7 +59,7 @@ const cardsList = ({places}) => {
         <div className="cards">
           {cardsRenderRestaurants}
         </div>
-          <LoadMoreButton loadMore = {loadMore}></LoadMoreButton>
+        <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton>
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
@@ -63,7 +67,7 @@ const cardsList = ({places}) => {
         <div className="cards">
           {cardsRenderSupermarkets}
         </div>
-          <LoadMoreButton></LoadMoreButton>
+        <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton>
       </div>
     </div>
   )

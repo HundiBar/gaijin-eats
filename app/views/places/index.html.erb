@@ -1,10 +1,8 @@
-<%= react_component("Navbar", {
-}) %>
+<%= react_component("Navbar", {}) %>
 <%= react_component("Map", {
   center: @map_center,
   zoom: @map_zoom,
   markers: [@markers]
 }) %>
-<%= react_component("Tabs", {places: @places
-}) %>
-
+<%= react_component("Tabs", {places: @places}) %>
+<%= react_component("Footer", {}) %>
