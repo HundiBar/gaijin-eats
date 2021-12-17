@@ -1,7 +1,11 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Card from "./Card";
+import loadMore from "./LoadMoreButton";
+
 
 const cardsList = ({places}) => {
+
+  const [placesFiltered, setPlaces] = useState(places);
   let cardsRenderRestaurants = places.map((place) => {
     if (place.supermarket === "no") {
       return (
@@ -53,7 +57,7 @@ const cardsList = ({places}) => {
           {cardsRenderSupermarkets}
         </div>
         <div className="load-more-button">
-          <button>Load more</button>
+          <loadMore places = {loadMore}></loadMore>
         </div>
       </div>
     </div>
