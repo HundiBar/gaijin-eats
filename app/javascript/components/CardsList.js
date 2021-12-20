@@ -6,7 +6,7 @@ import LoadMoreButton from "./LoadMoreButton";
 
 const cardsList = ({ places }) => {
   const [items, setItems] = useState([]);
-  const [visibleRestaurants, setVisibleRestaurants] = useState(3);
+  const [visibleRestaurants, setVisibleRestaurants] = useState(6);
   const [visibleSupermarkets, setVisibleSupermarkets] = useState(3);
 
   useEffect(() => {
@@ -59,7 +59,8 @@ const cardsList = ({ places }) => {
         <div className="cards">
           {cardsRenderRestaurants}
         </div>
-        <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton>
+        { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : ""}
+
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
@@ -67,7 +68,7 @@ const cardsList = ({ places }) => {
         <div className="cards">
           {cardsRenderSupermarkets}
         </div>
-        <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton>
+        { visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : ""}
       </div>
     </div>
   )
