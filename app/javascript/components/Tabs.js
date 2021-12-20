@@ -7,7 +7,7 @@ const Tabs = ({ places }) => {
   const [placesFiltered, setPlaces] = useState(places)
   const [resize, setResize] = useState(window.innerWidth)
 
-  const handleResize = (e) => {
+  const handleResize = () => {
     setResize(window.innerWidth);
   };
 
