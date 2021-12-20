@@ -5,6 +5,15 @@ import TabSelect from "./TabSelect";
 
 const Tabs = ({ places }) => {
   const [placesFiltered, setPlaces] = useState(places)
+  const [resize, setResize] = useState(window.innerWidth)
+
+  const handleResize = (e) => {
+    setResize(window.innerWidth);
+  };
+
+  window.addEventListener("resize", handleResize);
+
+
   const cuisinesArr = ['All', 'American', 'Brazilian', 'Taiwanese', 'Indian', 'Mexican', 'Cuban', 'British', 'International'];
   let index = 0;
 
@@ -21,8 +30,10 @@ const Tabs = ({ places }) => {
 
   let cuisines = cuisinesArr.map((cuisine) => {
     index += 1;
-    <Tab key={index} cuisine={cuisine} filterByCousine={filterByCousine}>
-    </Tab>
+    return (
+      <Tab key={index} cuisine={cuisine} filterByCousine={filterByCousine}>
+      </Tab>
+    )
   })
 
 
@@ -32,7 +43,7 @@ const Tabs = ({ places }) => {
         <div className='tabs-section'>
           <h2>Filter by cuisine</h2>
           <div className="cuisines-wrapper">
-            {window.innerWidth <= 414 ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : { cuisines }}
+            {window.innerWidth <= resize ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : cuisines}
           </div>
         </div>
         <CardsList places={placesFiltered}></CardsList>
