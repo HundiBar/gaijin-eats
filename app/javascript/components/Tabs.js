@@ -36,6 +36,15 @@ const Tabs = ({ places }) => {
     )
   })
 
+  const cuisinesSelect = () => {
+    if (resize <= 414) {
+      return (
+        <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect>
+      )
+    } else {
+      return cuisines
+    }
+  }
 
   return (
     <div>
@@ -43,7 +52,8 @@ const Tabs = ({ places }) => {
         <div className='tabs-section'>
           <h2>Filter by cuisine</h2>
           <div className="cuisines-wrapper">
-            {window.innerWidth <= resize ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : cuisines}
+            {/* {window.innerWidth <= resize ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : cuisines} */}
+            {cuisinesSelect()}
           </div>
         </div>
         <CardsList places={placesFiltered}></CardsList>
