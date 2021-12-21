@@ -73,6 +73,6 @@ const cardsList = ({ places }) => {
   )
 }
 
-
+//change the logic for error message to fit the hide button logic
 
 export default cardsList
