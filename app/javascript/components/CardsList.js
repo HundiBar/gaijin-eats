@@ -56,17 +56,23 @@ const cardsList = ({ places }) => {
       <div className="card">
         <h2 className="cards--title">Cafes &amp; Restaurants</h2>
         <p className="cards--subtitle">Find that homey flavor you’ve been craving from back home</p>
-        <div className="cards">
-          {cardsRenderRestaurants}
-        </div>
+
+        {cardsRenderRestaurants.length === 0
+          ?
+          <p className="not-found-message">Sorry, we couldn't any find places from this category</p>
+          : <div className="cards">{cardsRenderRestaurants}</div>}
+
         <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton>
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
         <p className="cards--subtitle">The places that can make your home feel like home again</p>
-        <div className="cards">
-          {cardsRenderSupermarkets}
-        </div>
+
+        {cardsRenderSupermarkets.length === 0
+          ?
+          <p className="not-found-message">Sorry, we couldn't find any places from this category</p>
+          : <div className="cards">{cardsRenderSupermarkets}</div>}
+
         <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton>
       </div>
     </div>
