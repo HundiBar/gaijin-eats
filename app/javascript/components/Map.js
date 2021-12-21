@@ -169,7 +169,7 @@ const Map = (props) => {
                   lat: marker.lat,
                   lng: marker.lng,
                 }}
-                icon= {image}
+                icon={image}
                 clusterer={clusterer}
                 onClick={() => {
                   setSelected(marker)
@@ -186,11 +186,13 @@ const Map = (props) => {
               setSelected(null)
             }}
           >
-            <div style={{ maxWidth: 120 }}>
-              <img style={{objectFit: 'contain', width: 120, height: 120}} src={selected.img} alt="no"/>
-              <a href={selected.url} target="_blank"><p>{selected.name}</p></a>
-              <small>{selected.address}</small>
-            </div>
+            <a href={selected.url} style={{ textDecoration: 'none' }} target="_blank">
+              <div style={{ maxWidth: 160 }}>
+                <img style={{ objectFit: 'contain', width: '100%' }} src={selected.img} alt="no" />
+                <p style={{ color: '#000', fontWeight: 'bold' }}>{selected.name}</p>
+                <small style={{ color: '#4D4D4D', fontStyle: 'italic', fontWeight: '300' }}>{selected.address}</small>
+              </div>
+            </a>
           </InfoWindow>) : null}
       </GoogleMap>
     </div>
