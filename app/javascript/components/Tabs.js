@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tab from './Tab';
 import CardsList from "./CardsList";
+import TabSelect from "./TabSelect";
 
 const Tabs = ({ places }) => {
   const [placesFiltered, setPlaces] = useState(places)
@@ -20,10 +21,8 @@ const Tabs = ({ places }) => {
 
   let cuisines = cuisinesArr.map((cuisine) => {
     index += 1;
-    return (
-      <Tab key={index} cuisine={cuisine} filterByCousine={filterByCousine}>
-      </Tab>
-    )
+    <Tab key={index} cuisine={cuisine} filterByCousine={filterByCousine}>
+    </Tab>
   })
 
 
@@ -33,7 +32,7 @@ const Tabs = ({ places }) => {
         <div className='tabs-section'>
           <h2>Filter by cuisine</h2>
           <div className="cuisines-wrapper">
-            {cuisines}
+            {window.innerWidth <= 414 ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : { cuisines }}
           </div>
         </div>
         <CardsList places={placesFiltered}></CardsList>
