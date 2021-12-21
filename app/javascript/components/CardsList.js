@@ -76,7 +76,7 @@ const cardsList = ({ places }) => {
           <p className="not-found-message">Sorry, we couldn't find any places from this category</p>
           : <div className="cards">{cardsRenderSupermarkets}</div>}
 
-        {visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : <div className="no-button-style"></div>
+        {visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : <div className="no-button-style"></div>}
 
       </div>
     </div>
