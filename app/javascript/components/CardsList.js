@@ -59,7 +59,7 @@ const cardsList = ({ places }) => {
         <div className="cards">
           {cardsRenderRestaurants}
         </div>
-        { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : ""}
+        { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : <div className="no-button-style"></div>}
 
       </div>
       <div className="card">
@@ -68,7 +68,7 @@ const cardsList = ({ places }) => {
         <div className="cards">
           {cardsRenderSupermarkets}
         </div>
-        { visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : ""}
+        {visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : <div className="no-button-style"></div>}
       </div>
     </div>
   )
