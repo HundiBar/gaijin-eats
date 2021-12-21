@@ -6,7 +6,7 @@ import LoadMoreButton from "./LoadMoreButton";
 
 const cardsList = ({ places }) => {
   const [items, setItems] = useState([]);
-  const [visibleRestaurants, setVisibleRestaurants] = useState(3);
+  const [visibleRestaurants, setVisibleRestaurants] = useState(6);
   const [visibleSupermarkets, setVisibleSupermarkets] = useState(3);
 
   useEffect(() => {
@@ -57,23 +57,27 @@ const cardsList = ({ places }) => {
         <h2 className="cards--title">Cafes &amp; Restaurants</h2>
         <p className="cards--subtitle">Find that homey flavor you’ve been craving from back home</p>
 
+
         {cardsRenderRestaurants.length === 0
           ?
           <p className="not-found-message">Sorry, we couldn't any find places from this category</p>
           : <div className="cards">{cardsRenderRestaurants}</div>}
 
-        <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton>
+         { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : <div className="no-button-style"></div>}
+
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
         <p className="cards--subtitle">The places that can make your home feel like home again</p>
+
 
         {cardsRenderSupermarkets.length === 0
           ?
           <p className="not-found-message">Sorry, we couldn't find any places from this category</p>
           : <div className="cards">{cardsRenderSupermarkets}</div>}
 
-        <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton>
+        {visibleSupermarkets < supermarkets.length ? <LoadMoreButton loadMore={loadMoreSupermarkets}></LoadMoreButton> : <div className="no-button-style"></div>
+
       </div>
     </div>
   )
