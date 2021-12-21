@@ -70,12 +70,43 @@
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
+
+  &:hover {
+    background: #C4C4C4;
+  }
 }
 
 .supermarkets {
   width: 100%;
 }
 
+
 .no-button-style {
   padding-bottom: 60px;
 }
+
+.not-found-message {
+  width: 100%;
+  color: #4D4D4D;
+  text-align: center;
+  padding: 60px 0;
+}
+
+@media only screen
+    and (device-width: 414px)
+    and (device-height: 896px)
+    and (-webkit-device-pixel-ratio: 3) {
+      .cards--subtitle {
+        font-size: 18px;
+        padding-bottom: 32px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+        grid-gap: 32px;
+      }
+
+      .load-more-button {
+        padding: 32px 0;
+      }
+    }
