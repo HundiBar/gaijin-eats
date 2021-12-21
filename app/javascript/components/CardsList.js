@@ -62,15 +62,12 @@ const cardsList = ({ places }) => {
           ?
           <p className="not-found-message">Sorry, we couldn't any find places from this category</p>
           : <div className="cards">{cardsRenderRestaurants}</div>}
-
-         { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : <div className="no-button-style"></div>}
+          { visibleRestaurants < restaurants.length ? <LoadMoreButton loadMore={loadMoreRestaurants}></LoadMoreButton> : <div className="no-button-style"></div>}
 
       </div>
       <div className="card">
         <h2 className="cards--title">Supermarkets</h2>
         <p className="cards--subtitle">The places that can make your home feel like home again</p>
-
-
         {cardsRenderSupermarkets.length === 0
           ?
           <p className="not-found-message">Sorry, we couldn't find any places from this category</p>
