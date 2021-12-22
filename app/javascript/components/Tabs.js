@@ -52,7 +52,6 @@ const Tabs = ({ places }) => {
         <div className='tabs-section'>
           <h2>Filter by cuisine</h2>
           <div className="cuisines-wrapper">
-            {/* {window.innerWidth <= resize ? <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect> : cuisines} */}
             {cuisinesSelect()}
           </div>
         </div>
