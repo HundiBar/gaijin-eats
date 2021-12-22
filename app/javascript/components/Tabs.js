@@ -37,7 +37,7 @@ const Tabs = ({ places }) => {
   })
 
   const cuisinesSelect = () => {
-    if (resize <= 414) {
+    if (resize <= 500) {
       return (
         <TabSelect cuisines={cuisinesArr} filterByCousine={filterByCousine}></TabSelect>
       )
