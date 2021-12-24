@@ -37,4 +37,7 @@ class PlacesController < ApplicationController
       @map_zoom = 12
     end
   end
+
+  def new
+  end
 end
