@@ -3,7 +3,7 @@ import React from "react";
 const button = () => {
   return (
     <div>
-      <button>Submit a location</button>
+      <button className="submit-location-button" >Submit a location</button>
     </div>
 
   )
