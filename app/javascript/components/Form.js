@@ -16,14 +16,17 @@ export default function Form() {
         </div>
         <div class="form-group">
           <label id="googleimagelink" for="googleimagelink">Google image link</label>
+          <label for="googleimagelink">Image that best represents the place</label>
           <input type="text" name="googleimagelink" class="form-control" id="googleimagelink" />
         </div>
         <div class="form-group">
           <label id="placetags" for="placetags">Place tags</label>
+          <label for="placetags">Ex: American; International. Add tags separated by commas.</label>
           <input type="text" name="placetags" class="form-control" id="placetags" />
         </div>
         <div class="form-group">
           <label id="contactinfo" for="exampleFormControlInput1">Your contact information</label>
+          <label for="contactinfo">Email address and/or name</label>
           <input type="text" name="contactinfo" class="form-control" id="contactinfo"/>
         </div>
         <button type="submit" class="website-button">Submit</button>
