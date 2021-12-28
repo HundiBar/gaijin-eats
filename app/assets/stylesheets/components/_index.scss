@@ -13,6 +13,13 @@ body {
   padding: 0;
   background-color: white;
   font-family: "Roboto", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 p, h1, h2, h3, h4 {
