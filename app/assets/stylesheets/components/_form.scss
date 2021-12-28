@@ -56,4 +56,9 @@ padding-top: 48px;
   margin-top: 32px;
   margin-bottom: 70px;
   border: none;
+  transition: ease-in-out 0.3s;
+  &:hover {
+    background: #C06E1C;
+  }
+
 }
