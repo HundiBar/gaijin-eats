@@ -1,0 +1,11 @@
+<div class="new-page--wrapper">
+  <div class="new-page--navbar">
+    <%= link_to root_path do %>
+      <%= react_component("Navbar", {}) %>
+    <% end %>
+  </div>
+  <main>
+    <%= react_component("Form", {}) %>
+  </main>
+  <%= react_component("Footer", {}) %>
+</div>

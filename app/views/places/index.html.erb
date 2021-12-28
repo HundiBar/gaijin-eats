@@ -1,4 +1,11 @@
-<%= react_component("Navbar", {}) %>
+<div class="nav-submit-wrapper">
+  <%= react_component("Navbar", {}) %>
+  <div class="submit-location">
+    <%= link_to new_place_path do %>
+      <%= react_component("Button", {}) %>
+    <% end %>
+  </div>
+</div>
 <%= react_component("Map", {
   center: @map_center,
   zoom: @map_zoom,
