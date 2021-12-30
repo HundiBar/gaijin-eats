@@ -1,9 +1,11 @@
 <div class="new-page--wrapper">
   <div class="new-page--navbar">
-    <%= react_component("Navbar", {}) %>
+    <%#= link_to places_path(@places) do %>
+      <%= react_component("Navbar", {}) %>
+      <%# end %>
+    </div>
+    <main>
+      <%= react_component("Form", {}) %>
+    </main>
+    <%= react_component("Footer", {}) %>
   </div>
-  <main>
-    <%= react_component("Form", {}) %>
-  </main>
-  <%= react_component("Footer", {}) %>
-</div>
