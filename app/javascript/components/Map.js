@@ -4,7 +4,6 @@ import {
   Marker,
   InfoWindow,
   MarkerClusterer,
-  Autocomplete,
 } from '@react-google-maps/api';
 
 const containerStyle = {
@@ -198,5 +197,6 @@ const Map = (props) => {
     </div>
   )
 }
+
 
 export default Map
