@@ -13,3 +13,12 @@
 }) %>
 <%= react_component("Tabs", {places: @places}) %>
 <%= react_component("Footer", {}) %>
+<script>
+  const el = document.getElementsByClassName('gm-style');
+  if (el.length > 0) {
+    console.log(el.length);
+  } else {
+    // window.location.reload();
+    console.log("not here")
+  }
+</script>
