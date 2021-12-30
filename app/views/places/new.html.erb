@@ -1,6 +1,8 @@
 <div class="new-page--wrapper">
   <div class="new-page--navbar">
-    <%= react_component("Navbar", {}) %>
+    <%= link_to root_path do %>
+      <%= react_component("Navbar", {}) %>
+    <% end %>
   </div>
   <main>
     <%= react_component("Form", {}) %>

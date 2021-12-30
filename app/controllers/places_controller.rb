@@ -36,6 +36,7 @@ class PlacesController < ApplicationController
       @map_center = [(avg_lat / @places.count), (avg_lon / @places.count)]
       @map_zoom = 12
     end
+
   end
 
   def new
