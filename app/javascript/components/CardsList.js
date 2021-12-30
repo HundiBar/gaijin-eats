@@ -11,7 +11,7 @@ const cardsList = ({ places }) => {
 
   useEffect(() => {
     setItems(places)
-  })
+  }, [])
 
   const loadMoreRestaurants = () => {
     setVisibleRestaurants((prevValue) => prevValue + 3)
