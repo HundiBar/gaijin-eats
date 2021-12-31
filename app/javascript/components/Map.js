@@ -186,8 +186,8 @@ const Map = (props) => {
             }}
           >
             <a href={selected.url} style={{ textDecoration: 'none' }} target="_blank">
-              <div className="present" style={{ maxWidth: 160 }}>
-                <img style={{ objectFit: 'contain', width: '100%' }} src={selected.img} alt="no" />
+              <div className="present" style={{ maxWidth: 322 }}>
+                <img style={{ objectFit: 'cover', width: '100%', height: 127 }} src={selected.img} alt="no" />
                 <p style={{ color: '#000', fontWeight: 'bold' }}>{selected.name}</p>
                 <small style={{ color: '#4D4D4D', fontStyle: 'italic', fontWeight: '300' }}>{selected.address}</small>
               </div>
