@@ -19,8 +19,10 @@ const Map = (props) => {
     lng: props.center[1],
   };
 
-  const image =
+  const imageClick =
     "https://maps.gstatic.com/mapfiles/kml/paddle/wht-circle-lv.png";
+
+  const imageNoClick = "https://maps.gstatic.com/mapfiles/kml/paddle/purple-blank.png";
 
   return (
     <div className="map-wrapper">
@@ -168,8 +170,8 @@ const Map = (props) => {
                   lat: marker.lat,
                   lng: marker.lng,
                 }}
-                icon={image}
                 clusterer={clusterer}
+                icon={imageClick}
                 onClick={() => {
                   setSelected(marker)
                 }}
