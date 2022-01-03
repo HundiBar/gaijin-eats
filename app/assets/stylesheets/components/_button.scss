@@ -1,4 +1,6 @@
-.submit-location-button {
+.submit-location-button,
+.submit-location-phone
+ {
   background: #F09133;
   border-radius: 8px;
   padding: 12px 20px;
@@ -6,14 +8,7 @@
   font-size: 18px;
   border: none;
   color: white;
-}
-
-.submit-location-phone {
-  background: #F09133;
-  border-radius: 8px;
-  padding: 12px 20px;
-  font-weight: 700;
-  font-size: 18px;
-  border: none;
-  color: white;
+  &:hover {
+    background: #C06E1C;
+  }
 }
