@@ -12,7 +12,7 @@ const containerStyle = {
 };
 
 const Map = (props) => {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(0)
 
   const position = {
     lat: props.center[0],
@@ -171,7 +171,7 @@ const Map = (props) => {
                   lng: marker.lng,
                 }}
                 clusterer={clusterer}
-                icon={imageClick}
+                icon={marker.id === selected.id ? imageNoClick : imageClick}
                 onClick={() => {
                   setSelected(marker)
                 }}
@@ -184,7 +184,7 @@ const Map = (props) => {
           (<InfoWindow
             position={{ lat: selected.lat, lng: selected.lng }}
             onCloseClick={() => {
-              setSelected(null)
+              setSelected(0)
             }}
           >
             <a href={selected.url} style={{ textDecoration: 'none' }} target="_blank">
