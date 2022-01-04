@@ -25,18 +25,30 @@ const Map = (props) => {
   const imageClick =
   {
     path: faMapMarkerAlt.icon[4],
-    fillColor: "#0000ff",
+    fillColor: "#000000",
+    fillOpacity: 1,
+    anchor: new google.maps.Point(
+      faMapMarkerAlt.icon[0] / 2, // width
+      faMapMarkerAlt.icon[1] // height
+    ),
+    strokeWeight: 0.75,
+    strokeColor: "",
+    scale: 0.05,
+  };
+
+  const imageNoClick =
+  {
+    path: faMapMarkerAlt.icon[4],
+    fillColor: "#F09133",
     fillOpacity: 1,
     anchor: new google.maps.Point(
       faMapMarkerAlt.icon[0] / 2, // width
       faMapMarkerAlt.icon[1] // height
     ),
     strokeWeight: 1,
-    strokeColor: "#ffffff",
-    scale: 0.075,
+    strokeColor: "#000000",
+    scale: 0.07,
   };
-
-  const imageNoClick = "https://maps.gstatic.com/mapfiles/kml/paddle/purple-blank.png";
 
   return (
     <div className="map-wrapper">
