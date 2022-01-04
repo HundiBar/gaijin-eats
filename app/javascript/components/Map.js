@@ -1,3 +1,4 @@
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from 'react'
 import {
   GoogleMap,
@@ -5,6 +6,8 @@ import {
   InfoWindow,
   MarkerClusterer,
 } from '@react-google-maps/api';
+
+console.log(faMapMarkerAlt)
 
 const containerStyle = {
   width: '100%',
@@ -20,7 +23,18 @@ const Map = (props) => {
   };
 
   const imageClick =
-    "https://maps.gstatic.com/mapfiles/kml/paddle/wht-circle-lv.png";
+  {
+    path: faMapMarkerAlt.icon[4],
+    fillColor: "#0000ff",
+    fillOpacity: 1,
+    anchor: new google.maps.Point(
+      faMapMarkerAlt.icon[0] / 2, // width
+      faMapMarkerAlt.icon[1] // height
+    ),
+    strokeWeight: 1,
+    strokeColor: "#ffffff",
+    scale: 0.075,
+  };
 
   const imageNoClick = "https://maps.gstatic.com/mapfiles/kml/paddle/purple-blank.png";
 
