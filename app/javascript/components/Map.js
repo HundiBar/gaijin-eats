@@ -196,8 +196,8 @@ const Map = (props) => {
 
         {selected ?
           (<InfoWindow
-            position={{ lat: selected.lat, lng: selected.lng }}
-            options={{}}
+            position={{ lat: selected.lat, lng: selected.lng}}
+            options={{ pixelOffset: new google.maps.Size(0, -50) }}
             onCloseClick={() => {
               setSelected(0)
             }}

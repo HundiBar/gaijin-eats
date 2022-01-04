@@ -9,7 +9,7 @@ function TabSelect({ cuisines, filterByCousine }) {
   })
 
   return (
-    <select className='cusine-select' onClick={filterByCousine}>
+    <select className='cusine-select' onChange={filterByCousine}>
       {options}
     </select>
   )
