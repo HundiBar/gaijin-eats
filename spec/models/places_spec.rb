@@ -7,10 +7,11 @@ RSpec.describe Place do
       address: '16 kamakura Krescent, Kamakura',
       latitude: 0,
       longitude: 0,
+      photo_url: "basicnextneedtoREGEXTEST"
     )
     expect(place).to_not be_valid
-    place.name = "Q"
-    # expect(place.name).to have_attributes(size: (be>= 1))
+    place.name = "Qu"
+    expect(place.name).to have_attributes(size: (be>= 1))
     expect(place).to be_valid
   end
 
@@ -20,6 +21,7 @@ RSpec.describe Place do
       address: '',
       latitude: 0,
       longitude: 0,
+      photo_url: "basicnextneedtoREGEXTEST"
     )
     expect(place).to_not be_valid
     place.address = "16 kamakura Krescent, Kamakura"
@@ -32,6 +34,7 @@ RSpec.describe Place do
       address: '16 kamakura Krescent, Kamakura',
       latitude: "",
       longitude: 1.0490,
+      photo_url: "basicnextneedtoREGEXTEST"
     )
 
     expect(place).to be_valid
@@ -43,6 +46,7 @@ RSpec.describe Place do
       address: '16 kamakura Krescent, Kamakura',
       latitude: -1.0304,
       longitude: "",
+      photo_url: "basicnextneedtoREGEXTEST"
     )
     expect(place).to be_valid
   end
