@@ -28,7 +28,7 @@ RSpec.describe Place do
     expect(place).to be_valid
   end
 
-  it 'has a latitude value which is a valid number' do
+  it 'has a latitude value which long enough minimum' do
     place = described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
@@ -40,15 +40,17 @@ RSpec.describe Place do
     expect(place).to be_valid
   end
 
-  it 'has a longitude which is a valid number' do
+  it 'has a longitude which is long enough minimum' do
     place = described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
-      latitude: -1.0304,
-      longitude: "",
-      photo_url: "basicnextneedtoREGEXTEST"
+      latitude: 1.0304,
+      longitude: 1.0304,
+      photo_url: "basicnextneedtREGEXTEST"
     )
-    expect(place).to be_valid
+    longitude = place.longitude.to_s
+    puts longitude.class
+    expect(longitude).to have_attributes(size: (be>10))
   end
 
 end
