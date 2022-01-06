@@ -29,7 +29,7 @@ RSpec.describe Place do
   end
 
   it 'has a latitude value which is a valid number' do
-    place = Place.new(
+    place = Place.described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
       latitude: "",
