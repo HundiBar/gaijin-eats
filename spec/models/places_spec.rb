@@ -16,7 +16,7 @@ RSpec.describe Place do
   end
 
   it 'has an address' do
-    place = Place.new(
+    place = Place.described_class.new(
       name: 'Q',
       address: '',
       latitude: 0,
