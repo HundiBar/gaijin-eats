@@ -3,7 +3,7 @@ class Place < ApplicationRecord
   validates :name, presence:true, length: { minimum: 1 }
   validates :address, presence:true, length: { minimum: 10}
   validates :photo_url, presence:true
-  validates :latitude, numericality: true, presence:true
-  validates :longitude, numericality: true, presence:true
+  validates_numericality_of :latitude,  presence:true
+  validates :longitude,  presence:true, numericality: true
   geocoded_by :address
 end

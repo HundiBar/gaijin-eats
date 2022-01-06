@@ -32,8 +32,8 @@ RSpec.describe Place do
     place = described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
-      latitude: "",
-      longitude: 1.0490,
+      latitude: 0,
+      longitude: 0,
       photo_url: "basicnextneedtoREGEXTEST"
     )
 
