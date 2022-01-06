@@ -16,7 +16,7 @@ RSpec.describe Place do
   end
 
   it 'has an address' do
-    place = Place.described_class.new(
+    place = described_class.new(
       name: 'Q',
       address: '',
       latitude: 0,
@@ -29,7 +29,7 @@ RSpec.describe Place do
   end
 
   it 'has a latitude value which is a valid number' do
-    place = Place.described_class.new(
+    place = described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
       latitude: "",
@@ -41,7 +41,7 @@ RSpec.describe Place do
   end
 
   it 'has a longitude which is a valid number' do
-    place = Place.described_class.new(
+    place = described_class.new(
       name: 'Q',
       address: '16 kamakura Krescent, Kamakura',
       latitude: -1.0304,
