@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Place, :type => :model do
-  subject{described_class.new(
+  subject {described_class.new(
       name: 'Restaurant name',
       address: '16 kamakura Krescent, Kamakura',
       latitude: 0.1304,
@@ -24,6 +24,8 @@ RSpec.describe Place, :type => :model do
 
   it 'is not valid without a latitude value' do
     subject.latitude = nil
+    puts subject.latitude
+    puts subject.latitude.class
     expect(subject).to_not be_valid
   end
 
