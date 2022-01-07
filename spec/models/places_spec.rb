@@ -1,6 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Place do
+RSpec.describe Place, :type => :model do
+  subject{described_class.new(
+      name: 'Restaurant name',
+      address: '16 kamakura Krescent, Kamakura',
+      latitude: 0.1304,
+      longitude: -1.3045,
+      photo_url: "basicnextneedtoREGEXTEST"
+  )}
   it 'has a name of more than at least 1 character' do
     place = described_class.new(
       name: '',
