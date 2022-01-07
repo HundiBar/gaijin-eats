@@ -22,16 +22,9 @@ RSpec.describe Place, :type => :model do
     expect(subject).to_not be_valid
   end
 
-  it 'has a latitude value which long enough minimum' do
-    place = described_class.new(
-      name: 'Q',
-      address: '16 kamakura Krescent, Kamakura',
-      latitude: 0,
-      longitude: 0,
-      photo_url: "basicnextneedtoREGEXTEST"
-    )
-
-    expect(place).to be_valid
+  it 'is not valid without a latitude value' do
+    subject.latitude = nil
+    expect(subject).to_not be_valid
   end
 
   it 'has a longitude which is long enough minimum' do
