@@ -29,16 +29,8 @@ RSpec.describe Place, :type => :model do
   end
 
   it 'is not valid without a longitude value' do
-    place = described_class.new(
-      name: 'Q',
-      address: '16 kamakura Krescent, Kamakura',
-      latitude: 1.0304,
-      longitude: 1.0304,
-      photo_url: "basicnextneedtREGEXTEST"
-    )
-    longitude = place.longitude.to_s
-    puts longitude.class
-    expect(longitude).to have_attributes(size: (be>10))
+    subject.longitude = nil
+    expect(subject).to_not be_valid
   end
 
 end
