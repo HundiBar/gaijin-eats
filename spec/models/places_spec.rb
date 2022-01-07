@@ -12,17 +12,14 @@ RSpec.describe Place, :type => :model do
     expect(subject).to be_valid
   end
 
-  it 'has an address' do
-    place = described_class.new(
-      name: 'Q',
-      address: '',
-      latitude: 0,
-      longitude: 0,
-      photo_url: "basicnextneedtoREGEXTEST"
-    )
-    expect(place).to_not be_valid
-    place.address = "16 kamakura Krescent, Kamakura"
-    expect(place).to be_valid
+  it 'is not valid without a name of minimum length of 1' do
+    subject.name = ''
+    expect(subject).to_not be_valid
+  end
+
+  it 'is not valid without an address of minimum length of 10' do
+    subject.address = "less 10"
+    expect
   end
 
   it 'has a latitude value which long enough minimum' do
