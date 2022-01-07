@@ -19,7 +19,7 @@ RSpec.describe Place, :type => :model do
 
   it 'is not valid without an address of minimum length of 10' do
     subject.address = "less 10"
-    expect
+    expect(subject).to_not be_valid
   end
 
   it 'has a latitude value which long enough minimum' do
