@@ -8,18 +8,8 @@ RSpec.describe Place, :type => :model do
       longitude: -1.3045,
       photo_url: "basicnextneedtoREGEXTEST"
   )}
-  it 'has a name of more than at least 1 character' do
-    place = described_class.new(
-      name: '',
-      address: '16 kamakura Krescent, Kamakura',
-      latitude: 0,
-      longitude: 0,
-      photo_url: "basicnextneedtoREGEXTEST"
-    )
-    expect(place).to_not be_valid
-    place.name = "Qu"
-    expect(place.name).to have_attributes(size: (be>= 1))
-    expect(place).to be_valid
+  it 'is valid with valid attributes' do
+    expect(subject).to be_valid
   end
 
   it 'has an address' do
