@@ -17,6 +17,13 @@ const containerStyle = {
 
 const Map = (props) => {
   const [selected, setSelected] = useState(0)
+  const [resize, setResize] = useState(window.innerWidth)
+
+  const handleResize = () => {
+    setResize(window.innerWidth);
+  };
+
+  window.addEventListener("resize", handleResize);
 
   const position = {
     lat: props.center[0],
@@ -92,7 +99,7 @@ const Map = (props) => {
             }}
           >
             <a href={selected.url} style={{ textDecoration: 'none' }} target="_blank">
-              <div className="present" style={{ maxWidth: 322 }}>
+              <div className="present" style={resize <= 500 ? { maxWidth: 200 } : { maxWidth: 275 }}>
                 <img style={{ objectFit: 'cover', width: '100%', height: 127 }} src={selected.img} alt="no" />
                 <p style={{ color: '#000', fontWeight: 'bold' }}>{selected.name}</p>
                 <small style={{ color: '#4D4D4D', fontStyle: 'italic', fontWeight: '300' }}>{selected.address}</small>
