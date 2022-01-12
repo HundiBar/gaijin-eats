@@ -157,7 +157,7 @@ Place.create!({
 
 Place.create!({
   name:"Nikko Asia Shokuin",
-  address:"〒2-4F, 1-37-2 Nishi-Ikebukuro, Toshima-ku, Tokyo Tokyo",
+  address:"〒2-4F, 1-37-2 Nishi-Ikebukuro, Toshima-ku, Tokyo",
   photo_url: "https://a1.cdn.japantravel.com/photo/61330-210032/840x560!/tokyo-nikko-asia-shokuhin-210032.jpg",
   url:"https://www.google.com/maps/place/Asia+Foods/@35.7587033,139.6923363,17z/data=!3m1!4b1!4m5!3m4!1s0x601892d271cc7bbf:0x40c349b9e0a7c459!8m2!3d35.7586464!4d139.6945456",
   cuisine: "Taiwanese",
