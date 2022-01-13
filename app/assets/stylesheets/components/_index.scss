@@ -21,15 +21,17 @@ body {
 
 button, a {
   cursor: pointer;
+  text-decoration: none !important;
+  color: black;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 
 a:visited {
-  text-decoration: none;
+  text-decoration: none !important;
   color: black;
 }
 
